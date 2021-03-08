@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "qDebNnaXsvyw4AGG8u4YVNjnGnj1IeSSQK0w5j1fF7k2IZoP5N4bPYqzqTWavAWU0Xndd71oBbdv3vJ4vjfAYQ==",
+  "dgSpecHash": "G4MBKImsSFROj9/oIRTEMtwFj4+Y/Brb2rpCIgey1B0P8wBaGabXDmAt1s4bYyCUN/EmISQHpurHoH+qOMsDAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.common\\12.7.0\\azure.storage.common.12.7.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.files.shares\\12.6.0\\azure.storage.files.shares.12.6.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
   "logs": []
 }
