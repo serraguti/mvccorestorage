@@ -8,25 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Serra\\.nuget\\packages\\": {},
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Serra\\Documents\\Visual Studio 2019\\Projects\\MvcCoreAzure\\MvcCoreAzure\\MvcCoreAzure.csproj",
-      "projectName": "MvcCoreAzure",
-      "projectPath": "C:\\Users\\Serra\\Documents\\Visual Studio 2019\\Projects\\MvcCoreAzure\\MvcCoreAzure\\MvcCoreAzure.csproj",
-      "packagesPath": "C:\\Users\\Serra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Serra\\Documents\\Visual Studio 2019\\Projects\\MvcCoreAzure\\MvcCoreAzure\\obj\\",
+      "projectUniqueName": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
+      "projectName": "MvcStorageFile",
+      "projectPath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
+      "packagesPath": "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Serra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ProfesorMCSD\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
