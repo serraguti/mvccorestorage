@@ -48,6 +48,10 @@
             "Azure.Storage.Files.Shares": {
               "target": "Package",
               "version": "[12.6.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [
