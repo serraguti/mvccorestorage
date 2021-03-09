@@ -15,9 +15,8 @@ namespace MvcStorageFile.Services
     {
         private ShareDirectoryClient root;
 
-        public ServiceStorageFile()
+        public ServiceStorageFile(String keys)
         {
-            String keys = "DefaultEndpointsProtocol=https;AccountName=storagetajamarpgs;AccountKey=AZN0grugwrgClnhivSv5up4VD2OAwT2m8Hk4j1z3BZ+MAYUAIUBc3T6JaQHL1vDSP6zKJikQm3bFB+gob1gMMQ==;EndpointSuffix=core.windows.net";
             ShareClient client = 
                 new ShareClient(keys, "ejemplo");
             this.root = client.GetRootDirectoryClient();
