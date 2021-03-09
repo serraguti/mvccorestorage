@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>MvcStorage</AssemblyName>
     <RootNamespace>MvcStorage</RootNamespace>
+    <UserSecretsId>34dd284e-95d0-438b-8aec-4497754b42e0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.0" />
     <PackageReference Include="Azure.Storage.Files.Shares" Version="12.6.0" />
   </ItemGroup>
 

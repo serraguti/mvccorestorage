@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pfuKgkiPKXnLE3VdxOU/8dzS7tcfEsHZkXniSSjv8i1lAjMdffWL/mVNrtJy/xXQQbvpPk4CcOVzf0p7AJpePA==",
+  "dgSpecHash": "SuN5AOwztOhCChP6XRuKQEgGUc9EKbSB86nnWNHv/tZn6JCEKFvhBIXhOCgzgKU7G9HKvOgmGlNF9UTnZQ8BNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
+    "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.blobs\\12.8.0\\azure.storage.blobs.12.8.0.nupkg.sha512",
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.common\\12.7.0\\azure.storage.common.12.7.0.nupkg.sha512",
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.files.shares\\12.6.0\\azure.storage.files.shares.12.6.0.nupkg.sha512",
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
