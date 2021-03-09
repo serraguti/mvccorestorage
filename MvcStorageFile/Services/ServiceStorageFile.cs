@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 using Azure;
 using Azure.Storage.Files.Shares;
 using Azure.Storage.Files.Shares.Models;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.File;
 
-namespace MvcStorageFile.Services
+namespace MvcStorage.Services
 {
     public class ServiceStorageFile
     {

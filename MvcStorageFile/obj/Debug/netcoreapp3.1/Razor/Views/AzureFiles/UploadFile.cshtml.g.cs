@@ -14,13 +14,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\Views\_ViewImports.cshtml"
-using MvcStorageFile;
+using MvcStorage;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"244810b2b6f520bc1933f4823b16a31c959b168b", @"/Views/AzureFiles/UploadFile.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ee680133451b845d7a3f85e6f889c730339ff8e8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8cd6745aa3e0b8b0a0330bcb30324ddbad858b5b", @"/Views/_ViewImports.cshtml")]
     public class Views_AzureFiles_UploadFile : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "AzureFiles", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -54,7 +54,7 @@ using MvcStorageFile;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<h1>Upload File Azure</h1>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "244810b2b6f520bc1933f4823b16a31c959b168b4583", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "244810b2b6f520bc1933f4823b16a31c959b168b4579", async() => {
                 WriteLiteral("\r\n    Volver a Index\r\n");
             }
             );
@@ -72,7 +72,7 @@ using MvcStorageFile;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "244810b2b6f520bc1933f4823b16a31c959b168b5968", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "244810b2b6f520bc1933f4823b16a31c959b168b5964", async() => {
                 WriteLiteral("\r\n    <input type=\"file\" name=\"file\"\r\n           class=\"form-control\"/>\r\n    <button type=\"submit\" class=\"btn btn-info\">\r\n        Upload File\r\n    </button>\r\n");
             }
             );

@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MvcStorageFile.Services;
+using MvcStorage.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcStorageFile.Controllers
+namespace MvcStorage.Controllers
 {
     public class AzureFilesController : Controller
     {

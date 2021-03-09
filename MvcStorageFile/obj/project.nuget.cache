@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G4MBKImsSFROj9/oIRTEMtwFj4+Y/Brb2rpCIgey1B0P8wBaGabXDmAt1s4bYyCUN/EmISQHpurHoH+qOMsDAQ==",
+  "dgSpecHash": "pfuKgkiPKXnLE3VdxOU/8dzS7tcfEsHZkXniSSjv8i1lAjMdffWL/mVNrtJy/xXQQbvpPk4CcOVzf0p7AJpePA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
+  "projectFilePath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
     "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\azure.storage.common\\12.7.0\\azure.storage.common.12.7.0.nupkg.sha512",

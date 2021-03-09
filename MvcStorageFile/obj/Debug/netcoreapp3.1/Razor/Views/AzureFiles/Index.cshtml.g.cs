@@ -14,13 +14,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\Views\_ViewImports.cshtml"
-using MvcStorageFile;
+using MvcStorage;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5232a757cbdc3ecc3e2add25735ce2b8c4c11026", @"/Views/AzureFiles/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ee680133451b845d7a3f85e6f889c730339ff8e8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8cd6745aa3e0b8b0a0330bcb30324ddbad858b5b", @"/Views/_ViewImports.cshtml")]
     public class Views_AzureFiles_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<String>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "AzureFiles", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -54,7 +54,7 @@ using MvcStorageFile;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<h1>Azure Files</h1>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110264935", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110264931", async() => {
                 WriteLiteral("\r\n    Upload File Azure\r\n");
             }
             );
@@ -89,7 +89,7 @@ using MvcStorageFile;
 #line hidden
 #nullable disable
             WriteLiteral(" \r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110266946", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110266942", async() => {
                 WriteLiteral("\r\n                Read File\r\n            ");
             }
             );
@@ -123,7 +123,7 @@ using MvcStorageFile;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110269477", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5232a757cbdc3ecc3e2add25735ce2b8c4c110269473", async() => {
                 WriteLiteral("\r\n                Delete file\r\n            ");
             }
             );

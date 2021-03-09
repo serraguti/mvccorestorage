@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj": {}
+    "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj": {
+    "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
+        "projectUniqueName": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj",
         "projectName": "MvcStorage",
-        "projectPath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorageFile.csproj",
+        "projectPath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\MvcStorage.csproj",
         "packagesPath": "C:\\Users\\ProfesorMCSD\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ProfesorMCSD\\Documents\\Visual Studio 2019\\Projects\\MvcStorageFile\\MvcStorageFile\\obj\\",
         "projectStyle": "PackageReference",

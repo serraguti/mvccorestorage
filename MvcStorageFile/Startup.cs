@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcStorageFile.Services;
+using MvcStorage.Services;
 
-namespace MvcStorageFile
+namespace MvcStorage
 {
     public class Startup
     {

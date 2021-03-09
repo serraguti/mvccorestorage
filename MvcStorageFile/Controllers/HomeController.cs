@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MvcStorageFile.Controllers
+namespace MvcStorage.Controllers
 {
     public class HomeController : Controller
     {
