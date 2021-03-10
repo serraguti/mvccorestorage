@@ -32,7 +32,8 @@ namespace MvcStorage.Services
 
         public async Task CreateContainerAsync(string containername)
         {
-            await this.service.CreateBlobContainerAsync(containername);
+            await this.service.CreateBlobContainerAsync(containername
+                , PublicAccessType.Blob);
         }
 
         public async Task DeleteContainerAsync(string containername)
