@@ -3,27 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 
 namespace MvcStorage.Services
 {
-    public class ServiceStorageBlobs : IServiceStorageBlob
+    public class ServiceStorageBlobs 
     {
         private BlobServiceClient service;
+
         public ServiceStorageBlobs(String keys)
         {
              this.service =
                 new BlobServiceClient(keys);
         }
+
         public async Task<List<string>> GetContainersAsync()
         {
-            BlobContainerClient client = service.GetBlobContainerClient("fotos1");
-            await client.GetBlobsAsync(Azure.Storage.Blobs.Models.BlobTraits.All
-                , Azure.Storage.Blobs.Models.BlobStates.None);
+            List<String> containers = new List<string>();
+            await foreach (BlobContainerItem container in
+                this.service.GetBlobContainersAsync())
+            {
+                containers.Add(container.Name);
+            }
+            return containers;
         }
 
         public async Task CreateContainerAsync(string containername)
         {
-            throw new NotImplementedException();
+            await this.service.CreateBlobContainerAsync(containername);
+        }
+
+        public async Task DeleteContainerAsync(string containername)
+        {
+            await this.service.DeleteBlobContainerAsync(containername);
         }
 
         public async Task DeleteBlobAsync(string containerName, string filename)
@@ -31,15 +43,11 @@ namespace MvcStorage.Services
             throw new NotImplementedException();
         }
 
-        public async Task DeleteContainerAsync(string containername)
-        {
-            throw new NotImplementedException();
-        }
 
-        public async List<String> GetBlobsAsync(string containerName)
-        {
-            throw new NotImplementedException();
-        }
+        //public async List<String> GetBlobsAsync(string containerName)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public async Task UploadBlobAsync(string containerName, string filename, string path)
         {

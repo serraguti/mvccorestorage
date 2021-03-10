@@ -37,3 +37,7 @@ C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcSt
 C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\MvcStorage.dll
 C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\MvcStorage.pdb
 C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\MvcStorage.genruntimeconfig.cache
+C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\bin\Debug\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\MvcStorage.csprojAssemblyReference.cache
+C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\Razor\Views\AzureBlobs\CreateContainer.cshtml.g.cs
+C:\Users\ProfesorMCSD\Documents\Visual Studio 2019\Projects\MvcStorageFile\MvcStorageFile\obj\Debug\netcoreapp3.1\Razor\Views\AzureBlobs\Index.cshtml.g.cs

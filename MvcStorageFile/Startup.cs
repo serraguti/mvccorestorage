@@ -22,8 +22,9 @@ namespace MvcStorage
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            String storagekeys = this.Configuration["AzureSecrets:StorageKeyAccount"];
+            String storagekeys = this.Configuration["StorageKeyAccount"];
             services.AddTransient(x => new ServiceStorageFile(storagekeys));
+            services.AddTransient(x => new ServiceStorageBlobs(storagekeys));
             services.AddControllersWithViews();
         }
 
