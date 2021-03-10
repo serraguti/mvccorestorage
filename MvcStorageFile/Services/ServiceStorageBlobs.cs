@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
@@ -58,9 +59,13 @@ namespace MvcStorage.Services
             await containerClient.DeleteBlobAsync(blobname);
         }
 
-        public async Task UploadBlobAsync(string containerName, string filename, string path)
+        public async Task UploadBlobAsync(string containername
+            , string blobname, Stream stream)
         {
-            throw new NotImplementedException();
+            BlobContainerClient containerClient =
+                this.service.GetBlobContainerClient(containername);
+            await
+                containerClient.UploadBlobAsync(blobname, stream);
         }
     }
 }
