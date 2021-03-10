@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using MvcStorage.Models;
 
 namespace MvcStorage.Services
 {
@@ -39,14 +40,18 @@ namespace MvcStorage.Services
             await this.service.DeleteBlobContainerAsync(containername);
         }
 
-        public async Task<List<String>> GetBlobsAsync(string containername)
+        public async Task<List<Blob>> GetBlobsAsync(string containername)
         {
             BlobContainerClient containerClient =
                 this.service.GetBlobContainerClient(containername);
-            List<String> blobs = new List<string>();
+            List<Blob> blobs = new List<Blob>();
             await foreach (BlobItem blob in containerClient.GetBlobsAsync())
             {
-                blobs.Add(blob.Name);
+                BlobClient blobclient =
+                    containerClient.GetBlobClient(blob.Name);
+                String uri = blobclient.Uri.AbsoluteUri;
+                String name = blob.Name;
+                blobs.Add(new Blob { Nombre = name, Uri = uri });
             }
             return blobs;
         }

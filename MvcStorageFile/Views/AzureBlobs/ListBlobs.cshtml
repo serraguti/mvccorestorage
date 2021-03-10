@@ -1,4 +1,4 @@
-﻿@model List<String> 
+﻿@model List<Blob> 
 
 <h1 style="color:red">List Blobs</h1>
 
@@ -9,14 +9,15 @@
 </a>
 
 <ul class="list-group">
-    @foreach (String blob in Model)
+    @foreach (Blob blob in Model)
     {
         <li class="list-group-item">
-            @blob
+            @blob.Nombre
+            <img src="@blob.Uri" style="width:200px;height:200px"/>
             <a asp-controller="AzureBlobs"
                asp-action="DeleteBlob" class="btn btn-outline-danger"
                asp-route-containername="@ViewData["CONTAINERNAME"]"
-               asp-route-blobname="@blob">
+               asp-route-blobname="@blob.Nombre">
                 Delete
             </a>
         </li>
