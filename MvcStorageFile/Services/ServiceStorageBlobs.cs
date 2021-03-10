@@ -38,16 +38,25 @@ namespace MvcStorage.Services
             await this.service.DeleteBlobContainerAsync(containername);
         }
 
-        public async Task DeleteBlobAsync(string containerName, string filename)
+        public async Task<List<String>> GetBlobsAsync(string containername)
         {
-            throw new NotImplementedException();
+            BlobContainerClient containerClient =
+                this.service.GetBlobContainerClient(containername);
+            List<String> blobs = new List<string>();
+            await foreach (BlobItem blob in containerClient.GetBlobsAsync())
+            {
+                blobs.Add(blob.Name);
+            }
+            return blobs;
         }
 
-
-        //public async List<String> GetBlobsAsync(string containerName)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public async Task DeleteBlobAsync(string containername
+            , string blobname)
+        {
+            BlobContainerClient containerClient =
+                this.service.GetBlobContainerClient(containername);
+            await containerClient.DeleteBlobAsync(blobname);
+        }
 
         public async Task UploadBlobAsync(string containerName, string filename, string path)
         {
