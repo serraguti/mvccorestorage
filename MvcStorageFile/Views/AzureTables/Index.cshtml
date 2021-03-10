@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MvcStorage.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+    List<String> empresas = ViewData["EMPRESAS"] as List<String>;
+}
+
+<h1>Client List</h1>
+
+<p>
+    <a asp-action="CreateClient">Create New</a>
+</p>
+
+@if (empresas != null)
+{
+    <form method="post">
+        <select name="empresa" class="form-control">
+            @foreach (String emp in empresas)
+            {
+                <option value="@emp">@emp</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-outline-success">
+            Mostrar clientes
+        </button>
+    </form>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartitionKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RowKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ETag)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartitionKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RowKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ETag)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
