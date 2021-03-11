@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.Azure.Cosmos.Table;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace MvcStorage.Models
 {
-    public class Alumno
+    public class Alumno: TableEntity
     {
         public String IdAlumno { get; set; }
         public String Nombre { get; set; }
