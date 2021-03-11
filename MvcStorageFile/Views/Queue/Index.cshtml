@@ -1,4 +1,4 @@
-﻿
+﻿@model List<String>
 @{
     ViewData["Title"] = "Index";
 }
@@ -7,7 +7,7 @@
 
 <form method="post">
     <label>Mensaje:</label>
-    <input type="text" name="mensaje" class="form-control"/><hr/>
+    <input type="text" name="mensaje" class="form-control" /><hr />
     <button type="submit" name="accion" value="mensaje"
             class="btn btn-success">
         Enviar UN mensaje
@@ -16,5 +16,21 @@
             class="btn btn-danger">
         Enviar Batch
     </button>
+    <button type="submit" name="accion" value="recibir"
+            class="btn btn-danger">
+        Recibir Mensajes
+    </button>
 </form>
+<hr/>
+@if (Model != null)
+{
+    <ul class="list-group">
+        @foreach (String msj in Model)
+        {
+            <li class="list-group-item">
+                @msj
+            </li>
+        }
+    </ul>
+}
 

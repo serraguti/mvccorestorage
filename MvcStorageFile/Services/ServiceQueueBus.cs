@@ -18,7 +18,8 @@ namespace MvcStorage.Services
         {
             //NECESITAMOS UN SENDER QUE ES EL QUE VA
             //ASOCIADO A LA QUEUE
-            ServiceBusSender sender = this.client.CreateSender("programeitors");
+            ServiceBusSender sender = 
+                this.client.CreateSender("programeitors");
             //EL PROPIO MENSAJE
             ServiceBusMessage message =
                 new ServiceBusMessage(data);
@@ -64,5 +65,41 @@ namespace MvcStorage.Services
                 await sender.SendMessagesAsync(batch);
             }
         }
+
+        List<String> mensajes = 
+            new List<string>();
+        //LOS MENSAJES DE DESCARGAN Y SON PROCESADOS POR AZURE
+        //NO PUEDO BUSCAR UN MENSAJE, ESTO ES UNA COLA
+        //SI HAY 230, LOS VA DESCARGANDO UNO A UNO
+        public async Task<List<String>> RecibirMensajes()
+        {
+            //NECESITAMOS UN PROCESADOR DE MENSAJES
+            ServiceBusProcessor processor =
+                this.client.CreateProcessor("programeitors");
+            processor.ProcessMessageAsync += MessageHandler;
+            processor.ProcessErrorAsync += Processor_ProcessErrorAsync;
+            //INICIA EL PROCESO DE RECUPERAR LOS MENSAJES
+            await processor.StartProcessingAsync();
+
+            //FINALIZA EL PROCESO
+            //await processor.StopProcessingAsync();
+            return this.mensajes;
+        }
+
+        private Task Processor_ProcessErrorAsync(ProcessErrorEventArgs arg)
+        {
+            return Task.CompletedTask;
+            //throw new NotImplementedException();
+        }
+
+        private async Task MessageHandler(ProcessMessageEventArgs e)
+        {
+            String data = e.Message.Body.ToString();
+            mensajes.Add(data);
+            //DEBEMOS IR ELIMINADO LOS MENSAJES DE LA COLA
+            //COMO PROCESADOS
+            await e.CompleteMessageAsync(e.Message);
+        }
+
     }
 }
