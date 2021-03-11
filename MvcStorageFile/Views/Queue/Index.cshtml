@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Service Bus Queue</h1>
+
+<form method="post">
+    <label>Mensaje:</label>
+    <input type="text" name="mensaje" class="form-control"/><hr/>
+    <button type="submit" name="accion" value="mensaje"
+            class="btn btn-success">
+        Enviar UN mensaje
+    </button>
+    <button type="submit" name="accion" value="batch"
+            class="btn btn-danger">
+        Enviar Batch
+    </button>
+</form>
+
