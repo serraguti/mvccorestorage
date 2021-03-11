@@ -20,6 +20,7 @@ namespace MvcStorage
         {
             this.Configuration = configuration;
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
             String storagekeys = this.Configuration["StorageKeyAccount"];
