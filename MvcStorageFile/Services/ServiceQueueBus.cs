@@ -89,7 +89,6 @@ namespace MvcStorage.Services
         private Task Processor_ProcessErrorAsync(ProcessErrorEventArgs arg)
         {
             return Task.CompletedTask;
-            //throw new NotImplementedException();
         }
 
         private async Task MessageHandler(ProcessMessageEventArgs e)
