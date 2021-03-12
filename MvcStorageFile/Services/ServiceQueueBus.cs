@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MvcStorage.Services
@@ -80,7 +81,7 @@ namespace MvcStorage.Services
             processor.ProcessErrorAsync += Processor_ProcessErrorAsync;
             //INICIA EL PROCESO DE RECUPERAR LOS MENSAJES
             await processor.StartProcessingAsync();
-
+            Thread.Sleep(30000);
             //FINALIZA EL PROCESO
             //await processor.StopProcessingAsync();
             return this.mensajes;
