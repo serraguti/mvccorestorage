@@ -23,6 +23,8 @@ namespace MvcStorage
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             String storagekeys = this.Configuration["StorageKeyAccount"];
             services.AddTransient(x => new ServiceStorageFile(storagekeys));
             services.AddTransient(x => new ServiceStorageBlobs(storagekeys));
@@ -30,7 +32,14 @@ namespace MvcStorage
             services.AddTransient<ServiceTableAlumnos>();
             String servicebuskeys =
                 this.Configuration["ServiceBusKey"];
-            services.AddTransient(x => new ServiceQueueBus(servicebuskeys));
+            services.AddTransient<ServiceQueueBus>();
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
+
+            
             services.AddControllersWithViews();
         }
 
@@ -44,6 +53,7 @@ namespace MvcStorage
             app.UseRouting();
 
             app.UseStaticFiles();
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

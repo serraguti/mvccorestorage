@@ -33,9 +33,7 @@ namespace MvcStorage.Controllers
                 await this.ServiceBus.SendBatchMessages();
             }else if (accion.ToLower() == "recibir")
             {
-                List<String> mensajes =
-                    await this.ServiceBus.RecibirMensajes();
-                return View(mensajes);
+                await this.ServiceBus.ReceiveMessages();
             }
             return View();
         }

@@ -1,18 +1,26 @@
 ﻿using Azure.Messaging.ServiceBus;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using MvcStorage.Extensions;
+using Microsoft.Extensions.Configuration;
 
 namespace MvcStorage.Services
 {
     public class ServiceQueueBus
     {
         private ServiceBusClient client;
-        public ServiceQueueBus(String keys)
+        private IHttpContextAccessor contextAccessor;
+        private List<String> messages; 
+        public ServiceQueueBus(IConfiguration configuration
+            , IHttpContextAccessor contextaccessor)
         {
+            String keys = configuration["ServiceBusKey"];
             this.client = new ServiceBusClient(keys);
+            this.contextAccessor = contextaccessor;
         }
 
         public async Task SendMessage(String data)
@@ -67,12 +75,10 @@ namespace MvcStorage.Services
             }
         }
 
-        List<String> mensajes = 
-            new List<string>();
         //LOS MENSAJES DE DESCARGAN Y SON PROCESADOS POR AZURE
         //NO PUEDO BUSCAR UN MENSAJE, ESTO ES UNA COLA
         //SI HAY 230, LOS VA DESCARGANDO UNO A UNO
-        public async Task<List<String>> RecibirMensajes()
+        public async Task ReceiveMessages()
         {
             //NECESITAMOS UN PROCESADOR DE MENSAJES
             ServiceBusProcessor processor =
@@ -81,10 +87,9 @@ namespace MvcStorage.Services
             processor.ProcessErrorAsync += Processor_ProcessErrorAsync;
             //INICIA EL PROCESO DE RECUPERAR LOS MENSAJES
             await processor.StartProcessingAsync();
-            Thread.Sleep(30000);
+            //Thread.Sleep(30000);
             //FINALIZA EL PROCESO
             //await processor.StopProcessingAsync();
-            return this.mensajes;
         }
 
         private Task Processor_ProcessErrorAsync(ProcessErrorEventArgs arg)
@@ -95,11 +100,21 @@ namespace MvcStorage.Services
         private async Task MessageHandler(ProcessMessageEventArgs e)
         {
             String data = e.Message.Body.ToString();
-            mensajes.Add(data);
+            if (this.contextAccessor.HttpContext.Session.GetObject<List<String>>("MESSAGES") != null)
+            {
+                this.messages =
+                    this.contextAccessor.HttpContext.Session.GetObject<List<String>>("MESSAGES");
+            }
+            else
+            {
+                this.messages = new List<string>();
+            }
+            this.messages.Add(data);
+            this.contextAccessor.HttpContext.Session
+                .SetObject<List<String>>("MESSAGES", this.messages);
             //DEBEMOS IR ELIMINADO LOS MENSAJES DE LA COLA
             //COMO PROCESADOS
             await e.CompleteMessageAsync(e.Message);
         }
-
     }
 }

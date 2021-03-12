@@ -1,6 +1,6 @@
-﻿@model List<String>
-@{
+﻿@{
     ViewData["Title"] = "Index";
+    List<String> messages = Context.Session.GetObject<List<String>>("MESSAGES");
 }
 
 <h1>Service Bus Queue</h1>
@@ -18,14 +18,14 @@
     </button>
     <button type="submit" name="accion" value="recibir"
             class="btn btn-danger">
-        Recibir Mensajes
+        Comprobar Mensajes
     </button>
 </form>
 <hr/>
-@if (Model != null)
+@if (messages != null)
 {
     <ul class="list-group">
-        @foreach (String msj in Model)
+        @foreach (String msj in messages)
         {
             <li class="list-group-item">
                 @msj
