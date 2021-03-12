@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj": {}
+    "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj": {
+    "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
+        "projectUniqueName": "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
         "projectName": "MvcStorage",
-        "projectPath": "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
+        "projectPath": "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
         "packagesPath": "C:\\Users\\Serra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\obj\\",
+        "outputPath": "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

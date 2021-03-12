@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l4j2l81IZLZsbwTdpLz4V+aUzJf42I/6Nz6VYL1MID7StETuoZlYlSUtyhsaWKJKNxeZXwHfPHOkIxOWj9nXGw==",
+  "dgSpecHash": "/ybpksPPQ8wSe3mTEsRFpVsIaScXxMhCPI7l0mPMe0NraOtdHZHLDzCBPFYCxXVb+8ICaVU5a59xGaE6QRU8Dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Serra\\Source\\Repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
+  "projectFilePath": "C:\\Users\\Serra\\source\\repos\\mvccorestorage14\\MvcStorageFile\\MvcStorage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Serra\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
     "C:\\Users\\Serra\\.nuget\\packages\\azure.core.amqp\\1.0.0\\azure.core.amqp.1.0.0.nupkg.sha512",

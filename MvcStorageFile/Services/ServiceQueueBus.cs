@@ -13,14 +13,14 @@ namespace MvcStorage.Services
     public class ServiceQueueBus
     {
         private ServiceBusClient client;
-        private IHttpContextAccessor contextAccessor;
+        private IServiceProvider serviceprovider;
         private List<String> messages; 
         public ServiceQueueBus(IConfiguration configuration
-            , IHttpContextAccessor contextaccessor)
+            , IServiceProvider serviceprovider)
         {
             String keys = configuration["ServiceBusKey"];
             this.client = new ServiceBusClient(keys);
-            this.contextAccessor = contextaccessor;
+            this.serviceprovider = serviceprovider;
         }
 
         public async Task SendMessage(String data)
@@ -100,17 +100,20 @@ namespace MvcStorage.Services
         private async Task MessageHandler(ProcessMessageEventArgs e)
         {
             String data = e.Message.Body.ToString();
-            if (this.contextAccessor.HttpContext.Session.GetObject<List<String>>("MESSAGES") != null)
+            IHttpContextAccessor context = (IHttpContextAccessor)
+                this.serviceprovider.GetService(typeof(IHttpContextAccessor));
+            
+            if (context.HttpContext.Session.GetObject<List<String>>("MESSAGES") != null)
             {
                 this.messages =
-                    this.contextAccessor.HttpContext.Session.GetObject<List<String>>("MESSAGES");
+                    context.HttpContext.Session.GetObject<List<String>>("MESSAGES");
             }
             else
             {
                 this.messages = new List<string>();
             }
             this.messages.Add(data);
-            this.contextAccessor.HttpContext.Session
+            context.HttpContext.Session
                 .SetObject<List<String>>("MESSAGES", this.messages);
             //DEBEMOS IR ELIMINADO LOS MENSAJES DE LA COLA
             //COMO PROCESADOS
